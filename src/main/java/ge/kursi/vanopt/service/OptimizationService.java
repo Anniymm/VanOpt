@@ -56,7 +56,7 @@ public class OptimizationService {
                 .map(s -> new SelectedShipment(request, s.name(), s.volume(), s.revenue()))
                 .toList();
 
-        request.setSelectedShipments(shipmentEntities);
+        request.addShipments(shipmentEntities);
         requestRepository.save(request);
 
         return toResponse(request, selected);

@@ -46,8 +46,10 @@ public class OptimizationRequest {
     public LocalDateTime getCreatedAt() { return createdAt; }
     public List<SelectedShipment> getSelectedShipments() { return selectedShipments; }
 
-    public void setSelectedShipments(List<SelectedShipment> selectedShipments) {
-        this.selectedShipments = selectedShipments;
+
+    // public setter mqonda pirdapir da methodad shevcvale
+    public void addShipments(List<SelectedShipment> shipments) {
+        this.selectedShipments.addAll(shipments);
     }
 
 //    private setterebi
