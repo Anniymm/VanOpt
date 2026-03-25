@@ -2,6 +2,7 @@ package ge.kursi.vanopt.controller;
 
 import ge.kursi.vanopt.dto.OptimizationRequestDto;
 import ge.kursi.vanopt.dto.OptimizationResponseDto;
+import ge.kursi.vanopt.dto.ShipmentDto;
 import ge.kursi.vanopt.service.OptimizationService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -38,4 +39,9 @@ public class OptimizationController {
     public ResponseEntity<List<OptimizationResponseDto>> getAll() {
         return ResponseEntity.ok(optimizationService.getAll());
     }
+
+//    @GetMapping("/selected")
+//    public ResponseEntity<List<ShipmentDto>> getSelected() {
+//        return ResponseEntity.ok(optimizationService.getSelected());
+//    }
 }

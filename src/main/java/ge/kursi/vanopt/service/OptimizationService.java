@@ -96,4 +96,13 @@ public class OptimizationService {
                 request.getCreatedAt()
         );
     }
+
+//    @Transactional(readOnly = true)
+//    public List<ShipmentDto> getSelected() {
+//        return requestRepository.findTopByOrderByCreatedAtDesc()
+//                .map(request -> request.getSelectedShipments().stream()
+//                        .map(s -> new ShipmentDto(s.getName(), s.getVolume(), s.getRevenue()))
+//                        .toList())
+//                .orElse(List.of());
+
 }
